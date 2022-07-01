@@ -1,7 +1,8 @@
+import { useState } from "react";
 import Expenses from "./components/Expenses";
 import NewExpenses from "./components/NewExpense/NewExpenses";
 
-const expenses =  [
+const BASEDEXPENESE = [
   {
     id: "e1",
     title: "car insurance",
@@ -15,9 +16,12 @@ const expenses =  [
 ];
 
 function App() {
+  const [expenses, setExpenses] = useState(BASEDEXPENESE);
+
   const saveNewExpenseHandler = (expense) => {
-    expenses.push(expense);
-    console.log(expenses);
+    setExpenses((pervExpenses) => {
+      return [expense, ...pervExpenses];
+    });
   };
   return (
     <div className="App">
