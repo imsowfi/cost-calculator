@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItems.css";
 
-function ExpenseItem(props) {
+const ExpenseItems = (props) => {
   const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
@@ -24,4 +24,4 @@ function ExpenseItem(props) {
   );
 }
 
-export default ExpenseItem;
+export default ExpenseItems;
