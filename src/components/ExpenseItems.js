@@ -11,6 +11,7 @@ const ExpenseItems = (props) => {
   };
 
   return (
+    <li>
     <div className="expense-item">
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
@@ -21,6 +22,7 @@ const ExpenseItems = (props) => {
         click here
       </button>
     </div>
+    </li> 
   );
 }
 
